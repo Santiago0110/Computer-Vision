@@ -8,7 +8,7 @@ Created on Wed Nov 23 10:33:27 2022
 import cv2
 import numpy as np
 
-bananos = cv2.imread('C:/Users/LASSODS/Cursos/ComputerVision_DeepLearning/1. Procesamiento de Imagenes/copa.jpg')
+bananos = cv2.imread('C:/Users/LASSODS/Cursos/ComputerVision_DeepLearning/1. Procesamiento de Imagenes/bananos.jpg')
 
 b = bananos[:,:,0]
 g = bananos[:,:,1]
@@ -18,7 +18,7 @@ r = bananos[:,:,2]
 img_gray = cv2.cvtColor(bananos,cv2.COLOR_BGR2GRAY)
 
 # Imagen binaria
-img_bin = np.uint8((img_gray<160)*255)
+img_bin = np.uint8((img_gray<233)*255)
 
 # Imagen segmentada sobre escala de grises
 img_seg = np.uint8(img_gray*(img_bin/255))
@@ -33,3 +33,8 @@ seg_color[:,:,2] = np.uint8(r*(img_bin/255))
 cv2.imshow('',seg_color)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+import matplotlib.pyplot as plt
+
+plt.hist(img_gray.flatten(), bins=15)
+plt.show()
