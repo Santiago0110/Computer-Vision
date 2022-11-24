@@ -8,7 +8,7 @@ Created on Wed Nov 23 10:33:27 2022
 import cv2
 import numpy as np
 
-imagen_prueba = cv2.imread('C:/Users/LASSODS/Cursos/ComputerVision_DeepLearning/1. Procesamiento de Imagenes/tarro2.jpg')
+imagen_prueba = cv2.imread('C:/Users/LASSODS/Cursos/ComputerVision_DeepLearning/1. Procesamiento de Imagenes/bananos.jpg')
 
 b = imagen_prueba[:,:,0]
 g = imagen_prueba[:,:,1]
@@ -38,7 +38,7 @@ cv2.imshow('',seg_color)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
-# plt.hist(img_gray.flatten(), bins=15)
-# plt.show()
+plt.hist(img_gray.flatten(), bins=15)
+plt.show()
