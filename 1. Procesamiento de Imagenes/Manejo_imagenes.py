@@ -8,7 +8,7 @@ Created on Wed Nov 23 10:33:27 2022
 import cv2
 import numpy as np
 
-imagen_prueba = cv2.imread('C:/Users/LASSODS/Cursos/ComputerVision_DeepLearning/1. Procesamiento de Imagenes/bananos.jpg')
+imagen_prueba = cv2.imread('C:/Users/LASSODS/Cursos/ComputerVision_DeepLearning/1. Procesamiento de Imagenes/2.jpg')
 
 b = imagen_prueba[:,:,0]
 g = imagen_prueba[:,:,1]
